@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Your text has {{ word_count }} words</h2>
+
+<a href="{% url 'home' %}">Try again</a> |
+<a href="{% url 'about' %}">About</a>
+
+<h2>Your text:</h2>
+{{ entered_text }}
+<h2>Word Dictionary</h2>
+{% for w, c in sorted_word_dictionary %}
+{{ w }} : {{ c }} <br />
+{% endfor %}
+</body>
+</html>
